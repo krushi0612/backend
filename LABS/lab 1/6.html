@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("enter a num"))
+        digit = n.toString().length
+        originalnum = n
+        reminder = 0
+        sum = 0
+        while (originalnum != 0) {
+            reminder = originalnum % 10
+            sum += Math.pow(reminder, digit)
+            originalnum = parseInt(originalnum / 10)
+        }
+        if (sum == n) {
+            alert("number is armstrong")
+
+        }
+        else {
+            alert("number is not armstrong")
+
+        }
+    </script>
+</body>
+</html>

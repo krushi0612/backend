@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //array destructuring
+
+        arr = [1,2,3,4,5,6,7,8,9];
+        let [a,b,c,...other]=arr;
+        document.writeln(a);
+        document.writeln(b);
+        document.writeln(c);
+        document.write("<br/>")
+        document.writeln(other);
+
+        document.write("<br/>")
+
+        let colors = ["black","blue","red","pink","white"]
+        let [color1,color2,...anyOther] = colors;
+        document.writeln(color1);
+        document.writeln(color2);
+
+        //object destructuring
+
+        student = {
+            name:"Krushi",
+            branch:"CSE",
+            enrollment_no:24010101074,
+            spi:10
+        }
+        document.write("<br/>");
+        let {name,branch,...another}=student;
+        document.writeln(name);
+        document.writeln(branch);
+    </script>
+</body>
+</html>

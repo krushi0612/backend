@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let n=parseInt(prompt("enter the number: "))
+        result="";
+        arr1=["one","two","three","four","five","six","seven","eight","nine","ten"];
+        arr2=["eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+        arr3=["","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
+        if(isNaN(n)){
+            alert("invalid output")
+        }
+        else if(n<=0 || n>1000){
+            alert("out of range")
+        }
+        else{
+           if(n>99){
+               r = (n / 100) |0;
+               result+=arr1[r-1]+" hundred ";
+               n = n % 100;
+           }
+           if(n>=20 && n<=99){
+                r = (n / 10) |0;
+                result+=arr3[r-1]+" ";
+                n = n % 10;
+           }
+           if(n>10 && n<20){
+                result+=arr2[(n%10)-1]+" ";
+                n = 0;
+           }
+           if(n>0){
+               result+=arr1[n-1];
+           }
+          document.write(result);
+        }  
+    </script>
+</body>
+</html>

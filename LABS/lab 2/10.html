@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <button onclick="fun(event)"></button>
+    <script>
+        function fun(e){
+            if(e.type=="click"){
+                 console.log("left clicked");
+            }
+            else{
+                console.log("right clicked");
+            }
+          
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Click Detection</title>
+</head>
+<body>
+
+<div id="clickableDiv" style="width: 200px; height: 100px; border: 1px solid black; text-align: center; line-height: 100px;">
+  Click or Right-Click Me
+</div>
+
+<p id="message"></p>
+
+<script>
+  const clickableDiv = document.getElementById('clickableDiv');
+  const messageParagraph = document.getElementById('message');
+
+  clickableDiv.addEventListener('mousedown', function(event) {
+    if (event.button === 0) { // Left mouse button
+      messageParagraph.textContent = 'Left clicked!';
+    }
+  });
+
+  clickableDiv.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // Prevent the default right-click context menu
+    messageParagraph.textContent = 'Right clicked!';
+  });
+</script>
+
+</body>
+</html>
