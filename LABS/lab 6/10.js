@@ -1,0 +1,6 @@
+const fs = require('fs');
+fs.watch('watchme.txt', (eventType, filename) => {
+  if (eventType === 'change') {
+    console.log('File Changed');
+  }
+});
